@@ -1,16 +1,16 @@
-import express from 'express';
-import dotenv from 'dotenv';
-
-// Load .env variables
-dotenv.config();
+import express from "express";
 
 const app = express();
-const port = process.env.PORT;
+const port = 3000;
 
 app.get('/', (req, res) => {
-  res.send('Hello from Express!');
-});
+  res.send('Hello World!');
+})
+
+app.get('/twitter', (req, res) => {
+  res.send('hiteshdotcom');
+})
 
 app.listen(port, () => {
-  console.log(`Server is running on http://localhost:${port}`);
+  console.log(`Example app listening at http://localhost:${port}`);
 });
